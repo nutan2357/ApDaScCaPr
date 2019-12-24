@@ -3,6 +3,7 @@
 Contents
 
 -Introduction/Business Problem  3  
+--Problem   3   
 --Target Audience        3  
 -Data        3  
 --Sources        3  
@@ -20,11 +21,12 @@ Contents
 
 ## Introduction/Business Problem
 
-Crime is a problem in any city and being prepared and planning to avert them is the key to dealing with it.
+Crime is a problem in any city and being prepared and planning to avert them is the key to dealing with it. 
+Crime occurs for various reasons and in various circumstances and could be localized based on the surroundings. It could be advantageous to understand the impact of the variables on the occurrence of crime to make it more decipherable in pattern and occurrence. 
+Toronto, the capital of the province of Ontario, is the most populous Canadian city. and will be the focal for us in this exercise 
 
-In this data analysis exercise , I am aiming to explore and identify quantitatively if there is a pattern to crime i.e. what areas does  crime occur in and do the surrounding locations have an impact on the number and nature of the crime that happens in an area.
-
-Toronto, the capital of the province of Ontario, is the most populous Canadian city. and will be the focal for us in this exercise
+### Problem 
+In this data analysis exercise , I am aiming to explore and identify quantitatively if there is a pattern to crime in terms of its surroundings i.e. what areas does  crime occur in , do the surrounding locations have an impact on the number and nature of the crime that happens in an area,  
 
 ### Target Audience
 
