@@ -3,11 +3,11 @@
 Contents
 
 -Introduction/Business Problem  3  
--Target Audience        3  
+--Target Audience        3  
 -Data        3  
--Sources        3  
--Data Description        3  
--Linking data to problem        5  
+--Sources        3  
+--Data Description        3  
+--Linking data to problem        5  
 -Methodology        5  
 -Data Preparation &amp; Transformation        5  
 -Methodology        5  
