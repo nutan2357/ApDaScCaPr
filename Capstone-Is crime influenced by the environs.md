@@ -2,19 +2,19 @@
 
 Contents
 
--Introduction/Business Problem        3
--Target Audience        3
--Data        3
--Sources        3
--Data Description        3
--Linking data to problem        5
--Methodology        5
--Data Preparation &amp; Transformation        5
--Methodology        5
--Results        6
--Result Discussion        6
--Conclusion        6
--Further next steps        6
+-Introduction/Business Problem  3  
+-Target Audience        3  
+-Data        3  
+-Sources        3  
+-Data Description        3  
+-Linking data to problem        5  
+-Methodology        5  
+-Data Preparation &amp; Transformation        5  
+-Methodology        5  
+-Results        6  
+-Result Discussion        6  
+-Conclusion        6  
+-Further next steps        6  
 
 
 
@@ -26,7 +26,7 @@ In this data analysis exercise , I am aiming to explore and identify quantitativ
 
 Toronto, the capital of the province of Ontario, is the most populous Canadian city. and will be the focal for us in this exercise
 
-## Target Audience
+### Target Audience
 
 I am hoping that an analysis like this will help in planning for the police department - where and how should they organize themselves to better thwart crime
 
@@ -38,7 +38,7 @@ There might be some intuitions or hypothesis on areas and crime but a quantitati
 
 ## Data
 
-## Sources
+### Sources
 
 Toronto city has taken steps in the last few years to democratize data and information and will be our source in this exercise.
 
@@ -46,34 +46,35 @@ The central data will be from the Toronto Police department on Major Crimes call
 
 Data on the location and other information about various venues in Toronto is from the Foursquare&#39;s explore API
 
-## Data Description
+### Data Description
 
 Lets go through some key columns in MCI data.
 
-The data has the nature of the crime in the MCI and Offence columns
+The data has the nature of the crime in the MCI and Offence columns  
+![alt text](https://github.com/nutan2357/ApDaScCaPr/blob/master/Img/data1.png)
 
- []
-It has latitude [column named Y] and longitude data [column named X] and the name of the neighbourhood
-
+It has latitude [column named Y] and longitude data [column named X] and the name of the neighbourhood  
+![alt text](https://github.com/nutan2357/ApDaScCaPr/blob/master/Img/dat2.png)
  
 
-It has occurrence date when the crime has occurred and reported date i.e. when the crime was reported. There are also a number of columns which break down the dates into days, years, months, weekdays etc.
+It has occurrence date when the crime has occurred and reported date i.e. when the crime was reported. There are also a number of columns which break down the dates into days, years, months, weekdays etc.  
+![alt text](https://github.com/nutan2357/ApDaScCaPr/blob/master/Img/dat3.png)   
+
+![alt text](https://github.com/nutan2357/ApDaScCaPr/blob/master/Img/dat4.png)  
 
 The Foursquare API is expected to give us venue details close to each crime geo coordinates
 
-The details of how this data was extracted will be elaborated in the data preparation and transformation section of the report but he final data structure is as below
+The details of how this data was extracted will be elaborated in the data preparation and transformation section of the report but he final data structure is as below  
+![alt text](https://github.com/nutan2357/ApDaScCaPr/blob/master/Img/dat5.png)  
 
 
+i.e. for each event id , where the crime occurred  
+![alt text](https://github.com/nutan2357/ApDaScCaPr/blob/master/Img/dat6.png)  
 
-i.e. for each event id , where the crime occurred
+The details of the venues which are within 300 m of the crime scene are listed along with Venue Name, Venue category and the location of the venue  
+![alt text](https://github.com/nutan2357/ApDaScCaPr/blob/master/Img/dat7.png)  
 
- 
-
-The details of the venues which are within 300 m of the crime scene are listed along with Venue Name, Venue category and the location of the venue
-
-
-
-## Linking data to problem
+### Linking data to problem
 
 With the MCI and foursquare data we have
 
@@ -89,15 +90,11 @@ This data now allows for understanding the relationship between the crime scene 
 
 ## Methodology
 
-## Data Preparation &amp; Transformation
+### Data Preparation &amp; Transformation
 
-Exploratory Data Analysis
+### Exploratory Data Analysis
 
-## Methodology
-
-section which represents the main component of the report where you discuss and describe any exploratory data analysis that you did, any inferential statistical testing that you performed, if any, and what machine learnings were used and why
-
-Foursquare API is very useful online application used my many developers &amp; other applications like Uber etc. In this project I have used it to retrieve information about the places present in the neighbourhoods of Toronto. The API returns a JSON file and we need to turn that into a data-frame. Here I&#39;ve chosen 100 popular spots for each neighborhood within a radius of 300 m.
+### Methodology
 
 ## Results
 
@@ -105,4 +102,4 @@ Foursquare API is very useful online application used my many developers &amp; o
 
 ## Conclusion
 
-## Further next steps
+### Further next steps
