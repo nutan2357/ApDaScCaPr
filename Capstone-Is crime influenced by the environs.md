@@ -51,27 +51,36 @@ Data on the location and other information about various venues in Toronto is fr
 Lets go through some key columns in MCI data.
 
 The data has the nature of the crime in the MCI and Offence columns  
+
 ![alt text](https://github.com/nutan2357/ApDaScCaPr/blob/master/Img/data1.png)
 
 It has latitude [column named Y] and longitude data [column named X] and the name of the neighbourhood  
+
 ![alt text](https://github.com/nutan2357/ApDaScCaPr/blob/master/Img/dat2.png)
  
 
 It has occurrence date when the crime has occurred and reported date i.e. when the crime was reported. There are also a number of columns which break down the dates into days, years, months, weekdays etc.  
+
 ![alt text](https://github.com/nutan2357/ApDaScCaPr/blob/master/Img/dat3.png)   
+
+
 
 ![alt text](https://github.com/nutan2357/ApDaScCaPr/blob/master/Img/dat4.png)  
 
 The Foursquare API is expected to give us venue details close to each crime geo coordinates
 
 The details of how this data was extracted will be elaborated in the data preparation and transformation section of the report but he final data structure is as below  
+
 ![alt text](https://github.com/nutan2357/ApDaScCaPr/blob/master/Img/dat5.png)  
 
 
 i.e. for each event id , where the crime occurred  
+
 ![alt text](https://github.com/nutan2357/ApDaScCaPr/blob/master/Img/dat6.png)  
 
+
 The details of the venues which are within 300 m of the crime scene are listed along with Venue Name, Venue category and the location of the venue  
+
 ![alt text](https://github.com/nutan2357/ApDaScCaPr/blob/master/Img/dat7.png)  
 
 ### Linking data to problem
