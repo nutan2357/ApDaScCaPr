@@ -145,12 +145,55 @@ To profile crimes better, they are compared against each other based on the occu
 ![alt text](https://github.com/nutan2357/ApDaScCaPr/blob/master/Img/eda6.png)    
 
 
-### Methodology
+### Methodology & Algorithm used  
+The approach towards understanding the relationship between venues and crimes was through clustering analysis. Intention is to use get the venues near each crime scene and then put them through a clustering algorithm so the unsupervised algorithm can identify a relationship between the crime and the venues nearby  
 
-## Results
+The venues data from foursquare was transformed into one hot encoded data based on venue categories. i.e. the rows were representing a crime scene , the columns were the venues close to the crime scene and the values in each cell were the average frequency with which the venue is close to the crime scene   
 
-## Result Discussion
+This data was put through a 5 cluster KNN algorithm   
 
-## Conclusion
+The results of the clustered data were merged with the crime scene data and the venue data. This data frame now allows for an end to end analysis – Crime data -> Venues close to the Crime Scene -> Cluster results   
 
-### Further next steps
+![alt text](https://github.com/nutan2357/ApDaScCaPr/blob/master/Img/eda7.png)  
+
+
+## Results  
+For visualizing the clusters, the attributes are reduced to 3 dimensions using PCA and are plotted in a 3D scatter chart   
+-Cluster 4 seems to be evidently different from the rest of the clusters, towards the right bottom of the chart (pink coloured dots) , It also has some outliers  
+-Rest of the clusters seem to be closely knit  
+-Clusters 0 & 3 are towards the left of the chart and seems to have a distinct identity   
+-Clusters 1 & 2 are close to the clusters 0 & 3 , with cluster 2 almost overlapping the others around  
+
+![alt text](https://github.com/nutan2357/ApDaScCaPr/blob/master/Img/result1.png)     
+
+Analysing each cluster with the crime, venue and premise lens gives a perspective of the nature of the clusters . The notebook has detail analysis but a summary of the clusters for the ease of consumption is in the below image.   
+
+![alt text](https://github.com/nutan2357/ApDaScCaPr/blob/master/Img/result2.png)     
+
+-Cluster 0 – Centered around down town Toronto , Almost all MCI Crime types are higher in absolute numbers in this region ,crime scenes largely around coffee shops and Cafes   
+
+-Cluster 1 – Assault, Break and Enter are relatively higher with the risk majorly around homes near parks   
+
+-Cluster 2 – Comparable to cluster 1 in some ways but different in the targets of crime primarily Cluster 2 is split on either side of the city centre i.e. towards the Western and Eastern parts of the city. While Cluster 1 was around homes, cluster 2 focusses on Apartments and Commercial spaces with Coffee shops in the neighbourhood. Residents here face Break and Enter as in relatively higher proportion  
+
+-Cluster 3 –Also a split cluster, with similar proportion in the north western and eastern parts of Toronto. Robbery and Auto Theft seems to be relatively higher surrounding Fast Food joints and Pizza places.   
+
+-Cluster 4 – Largely Break and enter crimes on homes in the western suburbs of Toronto. Parks seem to be closest to these crime scenes   
+
+
+## Result Discussion  
+A majority of the crime in general is centred around downtown , also has the highest density of venues as well. Though Toronto itself is multicultural , Downtown Toronto is particularly an amalgam with tourists, office spaces and lesser residents living in that area.   
+
+If you are new resident and looking out for a house then that is not the place to look for definitely. Should be an easy guess for the police to plan well around that area too.  
+
+If you are a business owner then Down Town Toronto might be offering a large foot fall so knowing the times when crime is most likely to occur [Fridays and Saturdays when Robberies & break Enters are more likely] & dealing with the issues in a safer way might still be very good option.   
+In the north western & eastern areas , homes near a park seem more attractive for break and enter crime. Especially around the neighbourhoods of West Humber-Clairville, Scarborough Village.   
+While most of the cluster and crimes seem to be around the city like a u chain, The safest places seem to in the central parts of the city around York Mills, Mt Pleasant, Bay view village etc   
+
+## Conclusion  
+In this exploration, I analysed the crime in Toronto with the lens of what premises and what kind of surrounding venues impact the nature of the crime. With an unsupervised clustering algorithm, patterns and relationships between the type of crime and the surrounding areas could be identified.   
+This hopefully would help choose a place to live or to set shop and would give a better perspective on how neighbourhoods and locations in that neighbourhood impact the local lives.   
+
+### Further next steps  
+This is a very interesting analysis and can be extended with more attributes from the Toronto Open data portal. Simple addition of demographics data to the existing Neighbourhood data and then clustering will help us understand if senior resident areas have a crime vs areas with working parents. Economic and Well being indicators can also be added to further analyse and understand the reasons for the crime and how it can be fundamentally addressed.   
+
