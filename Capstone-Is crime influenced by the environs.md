@@ -38,7 +38,7 @@ It might also help business who are willing to set shop pick areas to make it sa
 
 There might be some intuitions or hypothesis on areas and crime but a quantitative lens offers a more useful &amp; concrete way to evaluate those and will also help plan and act correctly.
 
-## Data
+## Data acquisition and cleaning
 
 ### Sources
 
@@ -100,6 +100,10 @@ With the MCI and foursquare data we have
 This data now allows for understanding the relationship between the crime scene and the venues surrounding the crime scene and if a particular type of crime scene is related to the surrounding venues
 
 ## Methodology
+### Data Preparation & Transformation 
+The data from MCI is primarily from 2014-2018 . In this case we restricted our analysis to an years’ worth of data from 2016 also cut down on some of the columns. This gave a dataset of 32K rows and 19 columns to explore.
+Repeated columns like [lat, long] or unique ID columns [ucr_code,  ucr_ext, Division, hood-id, ObjectId ] are dropped off for the rest of the analysis 
+
 
 ### Data Preparation &amp; Transformation
 
