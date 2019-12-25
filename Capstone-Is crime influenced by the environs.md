@@ -101,13 +101,49 @@ This data now allows for understanding the relationship between the crime scene 
 
 ## Methodology
 ### Data Preparation & Transformation 
-The data from MCI is primarily from 2014-2018 . In this case we restricted our analysis to an years’ worth of data from 2016 also cut down on some of the columns. This gave a dataset of 32K rows and 19 columns to explore.
-Repeated columns like [lat, long] or unique ID columns [ucr_code,  ucr_ext, Division, hood-id, ObjectId ] are dropped off for the rest of the analysis 
+The data from MCI is primarily from 2014-2018 . In this case we restricted our analysis to an years’ worth of data from 2016 also cut down on some of the columns. This gave a dataset of 32K rows and 19 columns to explore.  
+Repeated columns like [lat, long] or unique ID columns [ucr_code,  ucr_ext, Division, hood-id, ObjectId ] are dropped off for the rest of the analysis   
 
+![alt text](https://github.com/nutan2357/ApDaScCaPr/blob/master/Img/Method1.png)   
 
-### Data Preparation &amp; Transformation
+Each crime in the MCI data has an [event_unique_id] and each [event_unique_id] has geo coordinates in the form of [X, Y]  
+These coordinates are used to query the foursquare API to get the details of the venues within a 300m radius of the crime scene   
+
+Foursquare returns the results in the form of JSON . This JSON is then parsed to extract ['Venue', 'Venue Latitude', 'Venue Longitude', 'Venue Category'] details and these were then combined with the Crime scene event id [event_unique_id] and the coordinates of the crime scene [X, Y] to arrive the data set which contained all the venues within a 300 m radius of the crime scene
 
 ### Exploratory Data Analysis
+
+The goal of EDA was to better understand the data and the patterns in the data which could help interpret the final modelling results better   
+
+First the data was plotted to understand the distribution of the crimes across the city.   
+Downtown Toronto has a larger share of crimes than other neighbourhoods as can be seen in the map below   
+
+![alt text](https://github.com/nutan2357/ApDaScCaPr/blob/master/Img/eda1.png)  
+
+The second highest number of crimes are in the north western part of the city   
+
+Similar story comes from the neighbourhood list as well. Church-Yonge and Water front are communities in downtown Toronto and have the highest number of major crimes   
+![alt text](https://github.com/nutan2357/ApDaScCaPr/blob/master/Img/eda2.png)  
+
+A chart on the type of crime frequency indicates that Assault is a very prevalent crime and is almost 3X more frequent than the next frequent crime – Break and Enter.  
+![alt text](https://github.com/nutan2357/ApDaScCaPr/blob/master/Img/eda3.png)   
+
+Summer months , with the exception of October have a higher crime rate than the winter months  
+![alt text](https://github.com/nutan2357/ApDaScCaPr/blob/master/Img/eda4.png)   
+
+A pivot on the occurrence hour of crime by the type of crime , shows that   
+-Assault is highest at midnight, but is also higher in the evenings & nights    
+-Break & Enter has a different pattern, its relatively flat all through out the day but has a high during midnight(possibly as lesser number of people would be around )    
+-Auto Theft, Robbery are more frequent during evenings and nights  
+![alt text](https://github.com/nutan2357/ApDaScCaPr/blob/master/Img/eda5.png)    
+
+
+To profile crimes better, they are compared against each other based on the occurrence day of the week.   
+-Assault seems to occur equally frequently during any day , Weekends seem be relatively higher   
+-Friday for Break and enter criminal and almost any day for an auto thief seem to be good days. Noticeably Break and enter seems the least frequent during Saturdays and Sundays . The auto theft graph is relatively flat all through the week  
+
+![alt text](https://github.com/nutan2357/ApDaScCaPr/blob/master/Img/eda6.png)    
+
 
 ### Methodology
 
