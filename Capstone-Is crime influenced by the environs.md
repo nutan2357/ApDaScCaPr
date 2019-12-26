@@ -1,21 +1,21 @@
 # How is crime influenced by the surroundings?
-[link text](#abcde)
+
 Contents
 
--Introduction/Business Problem  3  
---Problem   3   
---Target Audience        3  
--Data        3  
---Sources        3  
---Data Description        3  
---Linking data to problem        5  
--Methodology        5  
--Data Preparation &amp; Transformation        5  
--Methodology        5  
--Results        6  
--Result Discussion        6  
--Conclusion        6  
--Further next steps        6  
+-[Introduction/Business Problem](Introduction/Business Problem)
+--Problem      
+--Target Audience          
+-Data          
+--Sources          
+--Data Description          
+--Linking data to problem           
+-Methodology          
+-Data Preparation &amp; Transformation           
+-Methodology          
+-Results           
+-Result Discussion          
+-Conclusion          
+-Further next steps           
 
 
 
@@ -194,7 +194,6 @@ While most of the cluster and crimes seem to be around the city like a u chain, 
 In this exploration, I analysed the crime in Toronto with the lens of what premises and what kind of surrounding venues impact the nature of the crime. With an unsupervised clustering algorithm, patterns and relationships between the type of crime and the surrounding areas could be identified.   
 This hopefully would help choose a place to live or to set shop and would give a better perspective on how neighbourhoods and locations in that neighbourhood impact the local lives.   
 
-### Further next steps  
+### Further next steps
 This is a very interesting analysis and can be extended with more attributes from the Toronto Open data portal. Simple addition of demographics data to the existing Neighbourhood data and then clustering will help us understand if senior resident areas have a crime vs areas with working parents. Economic and Well being indicators can also be added to further analyse and understand the reasons for the crime and how it can be fundamentally addressed.   
 
-<a name="abcde"> fin </a>
