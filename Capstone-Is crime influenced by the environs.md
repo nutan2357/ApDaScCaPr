@@ -10,12 +10,12 @@ Contents & Structure
 --Data Description          
 --Linking data to problem           
 -Methodology          
--Data Preparation &amp; Transformation           
--Methodology          
+--Data Preparation &amp; Transformation           
+--Methodology & Algorithm used          
 -Results           
 -Result Discussion          
 -Conclusion          
--Further next steps           
+--Further next steps           
 
 
 
